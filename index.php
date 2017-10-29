@@ -6,7 +6,11 @@
  * Time: 16:36
  */
 session_start();
-require 'config.php';
+require "config.php";
+require "vendors/PHPExcel/PHPExcel.php";
+require "vendors/dompdf/dompdf_config.inc.php";
+//require "environment.php";
+
 
 spl_autoload_register(function($class){
     if (file_exists('controllers/'.$class.'.php')) {

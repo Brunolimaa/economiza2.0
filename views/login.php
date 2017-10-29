@@ -6,16 +6,17 @@
     <div class="login_wrapper">
         <div class="animate form login_form">
             <section class="login_content">
-                <form>
+                <form method="POST">
                     <h1>Login Form</h1>
                     <div>
-                        <input type="text" class="form-control" placeholder="Username" required="" />
+                        <input type="text" name="user" class="form-control" placeholder="Username" required="" />
                     </div>
                     <div>
-                        <input type="password" class="form-control" placeholder="Password" required="" />
+                        <input type="password" name="pass" class="form-control" placeholder="Password" required="" />
                     </div>
                     <div>
-                        <a class="btn btn-default submit" href="painel">Entrar</a>
+                        <!--<a class="btn btn-default submit" href="painel">Entrar</a>-->
+                        <input type="submit" name="send" value="Entrar" class="btn btn-default"/>
                         <a class="reset_pass" href="#">Perdeu sua senha?</a>
                     </div>
 

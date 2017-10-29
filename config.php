@@ -1,4 +1,5 @@
 <?php
+require "environment.php";
 /**
  * Created by PhpStorm.
  * User: bruno
@@ -7,10 +8,18 @@
  */
 $config = array();
 
-$config['dbuser'] = 'root';
-$config['dbpass'] = '';
-$config['host'] = 'localhost';
-$config['dbname'] = 'economiza';
+if(ENVIRONMENT == 'development'){
+    $config['dbuser'] = 'root';
+    $config['dbpass'] = '';
+    $config['host'] = 'localhost';
+    $config['dbname'] = 'economiza';
+}else{
+    $config['dbuser'] = 'econo583_adm';
+    $config['dbpass'] = 'BrunoDaniloLuan';
+    $config['host'] = 'br444.hostgator.com.br';
+    $config['dbname'] = 'econo583_adm';
+}
+
 
 global $db;
 try {

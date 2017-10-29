@@ -27,4 +27,7 @@ class Controller
         require "views/".$viewName.".php";
     }
 
+    public function loadTemplateLista($viewName, $viewData = array()){
+        require "views/templateLista.php";
+    }
 }
